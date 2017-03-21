@@ -9,6 +9,17 @@
   </head>
 
   <body>
-    <%= yield %>
+  	<div id="wrapper">
+	  	<h1>Customer Relation Manager</h1>
+	  	<nav>
+	  		<ul>
+	  			<li><%= link_to 'All Customers', customers_path %></li>
+	  			<li><%= link_to 'Alphabetized Customers', customers_alphabetized_path %></li>
+	  			<li><%= link_to 'Missing Email Customers', customers_missing_email_path %></li>
+	  		</ul>
+	  	</nav>
+	  	
+	    <%= yield %>
+    </div>
   </body>
 </html>

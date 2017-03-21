@@ -1,3 +1,71 @@
 // Place all the styles related to the customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background: #DDDDDD;
+	font-size: 10px;
+	padding-top: 2em;
+
+	#wrapper {
+		width: 80%;
+		margin: 0 auto;
+
+		h1 {
+			font-size: 2em;
+			text-align: center;
+			text-transform: uppercase;
+			color: #000000;
+		}
+
+		nav {
+			width: 100%;
+			padding-top: 2em;
+
+			ul {
+				list-style: none;
+				text-align: center;
+
+				li {
+					display: inline-block;
+
+					a {
+						font-size: 1.4em;
+						padding: .5em 1em;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		h2 {
+			@extend h1;
+		}
+
+		.customer {
+			padding: 2em 1em;
+			width: 30%;
+			background: #FFFFFF;
+			margin: 1.5%;
+			min-height: 450px;
+			float: left;
+			box-sizing: border-box;
+			box-shadow: 2px 2px 5px 1px #444444;
+
+			h3 {
+				font-size: 2em;
+				color: #000000;
+				font-weight: bold;
+			}
+
+			img {
+				width: 50%;
+				margin-bottom: 2em;
+			}
+
+			p {
+				font-size: 1.2em;
+			}
+		}
+	}
+}
