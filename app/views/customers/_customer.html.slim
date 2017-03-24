@@ -2,14 +2,14 @@
 	h3 = customer.full_name
 	= image_tag customer.image
 	
-	- unless customer.province.blank?
-		p
-			b Province: 
-			= customer.province.name
-	- else
+	- if customer.province.blank?
 		p 
 			b Province: 
 			| None
+	- else
+		p
+			b Province: 
+			= customer.province.name
 
 	p
 		b Phone: 
