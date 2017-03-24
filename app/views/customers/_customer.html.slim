@@ -1,16 +1,26 @@
 .customer
 	h3 = customer.full_name
 	= image_tag customer.image
+	
+	- unless customer.province.blank?
+		p
+			b Province: 
+			= customer.province.name
+	- else
+		p 
+			b Province: 
+			| None
+
 	p
 		b Phone: 
 		= customer.phone_number
 		
-	- unless customer.email_address.empty?
+	- unless customer.email_address.blank?
 		p
 			b Email: 
 			= customer.email_address
 
-	- unless customer.notes.empty?
+	- unless customer.notes.blank?
 	p
 		b Notes: 
 		= customer.notes
